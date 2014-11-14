@@ -12,15 +12,24 @@ div#menu{
 	margin-right : 3%;
 	border-right : 3%;
 	padding-right : 3%;
-	height : 1500px;
+	height : 500px;
 }
 
 div#pied{
 	color : darkblue;
 	background-color : pink;
-	padding-top : 1%;
+	margin-top : 5%;
 	padding-bottom : 1%;
 	text-align : justify;
+}
+
+li.type{
+	text-decoration : underline;
+	font-size : 110%;
+}
+
+li.lita{
+	margin-left : 15%;
 }
 
 li.menu :link{
@@ -50,6 +59,10 @@ div#corps{
 li.menu{
 	list-style : none;
 	padding-top : 15%;
+}
+
+h1.titre{
+	padding-bottom : 1%;
 }
 
 h2{
