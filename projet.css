@@ -19,7 +19,6 @@
 
 	margin-left : 3% ;
 	}
-	
 div#entete{
 	color : darkblue;
 	background-color : lightgreen;
@@ -41,8 +40,9 @@ div#pied{
 	color : darkblue;
 	background-color : pink;
 	margin-top : 5%;
-	padding-bottom : 1%;
 	text-align : justify;
+	padding-top : 0.1%;
+	padding-bottom : 0.1%;
 }
 
 li.type{
@@ -83,6 +83,15 @@ li.menu{
 	padding-top : 15%;
 }
 
+li.pied{
+	display : inline;
+	padding-right : 5%;
+}
+
+li.pied :link{
+	text-decoration : none;
+}
+
 h1.titre{
 	padding-bottom : 1%;
 }
@@ -95,5 +104,3 @@ h2{
 .tab{
 	margin-left : 50px;
 }
-
-

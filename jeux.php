@@ -67,7 +67,9 @@
 			
 		</div>
 		<div id="pied">
-			
+			<?php
+				include("pied.php");
+			?>
 		</div>	
 		
 	</body>
