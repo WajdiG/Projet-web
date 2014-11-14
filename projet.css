@@ -1,3 +1,25 @@
+:required{
+	background-color : pink;
+	}
+	
+#formulaire{
+	padding-left : 15%;
+	}
+	
+#titre{
+	float : left;
+	height : 2000 px;
+	}
+
+#tit{
+	padding : auto 5% auto 1% ;
+	}
+	
+#tit2{
+
+	margin-left : 3% ;
+	}
+	
 div#entete{
 	color : darkblue;
 	background-color : lightgreen;
