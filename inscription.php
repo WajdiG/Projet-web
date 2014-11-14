@@ -75,7 +75,9 @@
 		</form></p>
 	 
 		<div id="pied">
-			O
+			<?php
+				include("pied.php");
+			?>
 		</div>	
 	</body>
 </html>

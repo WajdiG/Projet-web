@@ -28,7 +28,9 @@
 			<p> Sivous êtes déjà inscrit, accèdez à votre <a href="panier.html">panier</a> ou recherche la prochaine activité de votre enfant <a href="recherche.html">ici</a></p>
 		</div>
 		<div id="pied">
-			O
+			<?php
+				include("pied.php");
+			?>
 		</div>	
 		
 	</body>
