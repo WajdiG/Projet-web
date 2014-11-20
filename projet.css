@@ -30,7 +30,7 @@ div#entete{
 div#menu{
 	float : left;
 	text-align : justify;
-	margin-right : 3%;
+	margin-right : 5%;
 	border-right : 3%;
 	padding-right : 3%;
 	height : 500px;
@@ -74,8 +74,8 @@ li.menu :hover{
 
 div#corps{
 	text-align : justify;
-	margin-right : 1%;
 	margin-top : 2%;
+	margin-left : 20%;
 }
 
 li.menu{
@@ -85,7 +85,8 @@ li.menu{
 
 li.pied{
 	display : inline;
-	padding-right : 5%;
+	padding-right : 15px;
+	margin-left : 100px;
 }
 
 li.pied :link{
