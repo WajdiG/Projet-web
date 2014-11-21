@@ -13,7 +13,7 @@
 		$Solo=$_POST["Solo"];
 		$Coop=$_POST["Coop"];
 		$Multi=$_POST["Multi"];		
-		$Age=$_POST["age"];		
+		$Age=$_POST["age"];			
 		$LienBase=mysql_connect($server,$user,$mdp);
 		$retour=mysql_select_db($bdd,$LienBase);
 		
@@ -256,6 +256,7 @@
 							if($Genre==''){
 								echo 'Genre : '.$Data['Genre'].'<br />';
 							}
+							echo 'Quantité en stock : '.$Data['NbJeuxStock'].'<br />';
 							echo '</p>';
 						}
 						

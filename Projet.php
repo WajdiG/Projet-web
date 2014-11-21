@@ -18,15 +18,15 @@
 			</div>
 			<div id="corps">
 			
-				<h2> Bienvenue dans la ludothèque du Mans, votre site pour louer des jeux !</h2>
+				<h2> Bienvenue dans la ludothèque du Mans, votre site pour louer des jeux vidéos !</h2>
 				<ul>
 					<p>Dans notre ludothèque vous pourrez : </p>
-					<li>louer des jouets et jeux de sociétés pour vos enfants</li>
-					<li>prêter ceux de vos enfants qui ne leurs servent plus</li>
-					<li>vous rendre dans des espaces de jeux permettant ainsi à votre enfant de s'amuser avec d'autres enfants de son âge</li>
+					<li>louer des jeux vidéos pour vous et/ou vos enfants</li>
+					<li>Mettre vos jeux à disposition pour la communauté</li>
+					<li>Participer à des évènements permettant aux joueurs de se rencontrer</li>
 				</ul>
-				<p> Pour bénéficier de nos services, vous devrez simplement vous inscrire sur notre site en <a href="inscription.html">cliquant ici</a></p>
-				<p> Sivous êtes déjà inscrit, accèdez à votre <a href="panier.html">panier</a> ou recherche la prochaine activité de votre enfant <a href="recherche.html">ici</a></p>
+				<p> Pour bénéficier de nos services, vous devrez simplement vous inscrire sur notre site en cliquant<a href="inscription.php"> ici</a></p>
+				<p> Si vous êtes déjà inscrit, accèdez à votre <a href="panier.html">panier</a> ou recherchez un jeu <a href="jeux.php">ici</a></p>
 			</div>
 		</div>
 		<div id="pied">

@@ -16,7 +16,12 @@
 				?>
 		</div>
 		<div id="corps">
-		
+			<?php
+				$Requete='select `Ans`,`Mois`,`Jour` from `VR_grp1_Jeux`';
+				$Reponse=mysql_query($Requete);
+				$Data=mysql_fetch_assoc($Reponse);
+				
+			?>
 		</div>
 		<div id="pied">
 			<?php
