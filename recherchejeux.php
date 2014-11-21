@@ -13,6 +13,7 @@
 		$Solo=$_POST["Solo"];
 		$Coop=$_POST["Coop"];
 		$Multi=$_POST["Multi"];		
+		$Age=$_POST["age"];		
 		$LienBase=mysql_connect($server,$user,$mdp);
 		$retour=mysql_select_db($bdd,$LienBase);
 		
@@ -34,26 +35,10 @@
 		}
 		
 		
-		if(strlen($Nom)>0){
-
-			$Requete='select `Nom` from `VR_grp1_Jeux` where Nom=\''.$Nom.'\'';
-			$Reponse=mysql_query($Requete);
-			$Reponse=mysql_fetch_assoc($Reponse);
-			
-			if(strlen($Reponse) > 0){
-				echo $Nom." est present dans notre base de donnee. ";
-			}
-			else{
-				echo "Nous ne possedons pas cet article.";
-			}
-			
-		}
-		
-		
 		$req = 'SELECT * from `VR_grp1_Jeux`';
 		$req2 = 'select count(*) as nombre_jeux, Nom from `VR_grp1_Jeux`';
 		
-		if($Genre!=''||$Nom!=''||$Plateforme!=''||$Solo!=0||$Coop!=0||$Multi!=0||$Nom!=''){
+		if($Genre!=''||$Nom!=''||$Plateforme!=''||$Solo!=0||$Coop!=0||$Multi!=0||$Nom!=''||$Age!=0){
 			$req = $req.' WHERE';
 			$req2 = $req2.' WHERE';
 			if($Genre!=''){
@@ -122,6 +107,52 @@
 				}
 				$cc=1;	
 			}
+			if($Age!=0){
+				if($cc==0){
+					if($Age==3){
+						$req = $req.' Age=3';
+						$req2 = $req2.' Age=3';
+					}
+					else if($Age==7){
+						$req = $req.' Age=7';
+						$req2 = $req2.' Age=7';
+					}
+					else if($Age==12){
+						$req = $req.' Age=12';
+						$req2 = $req2.' Age=12';
+					}
+					else if($Age==16){
+						$req = $req.' Age=16';
+						$req2 = $req2.' Age=16';
+					}
+					else if($Age==18){
+						$req = $req.' Age=18';
+						$req2 = $req2.' Age=18';
+					}
+				}
+				else{
+					if($Age==3){
+						$req = $req.' and Age=3';
+						$req2 = $req2.' and Age=3';
+					}
+					else if($Age==7){
+						$req = $req.' and Age=7';
+						$req2 = $req2.' and Age=7';
+					}
+					else if($Age==12){
+						$req = $req.' and Age=12';
+						$req2 = $req2.' and Age=12';
+					}else if($Age==16){
+						$req = $req.' and Age=16';
+						$req2 = $req2.' and Age=16';
+					}
+					else if($Age==18){
+						$req = $req.' and Age=18';
+						$req2 = $req2.' and Age=18';
+					}
+				}
+				$cc=1;	
+			}
 		}
 		 
 		echo "<!DOCTYPE html>
@@ -147,8 +178,62 @@
 						echo "<h1>Résultat</h1>";
 						echo "<p>";
 						echo "Votre recherche : ";
-						echo 'Jeux '.$Genre.' sur '.$Plateforme.'.<br />';
+						if($Genre!=''){
+							echo 'Jeux '.$Genre;
+						}
+						if($Plateforme!=''){
+							echo ' sur '.$Plateforme;
+						}
+						if($Solo!=0||$Coop!=0||$Multi!=0){
+							if($Solo!=0){
+								echo ' en Solo,';
+								if($Coop!=0){
+									echo ' Coop,';
+								}
+								if($Multi!=0){
+									echo ' Multi,';
+								}
+							}
+							else if($Coop!=0){
+								echo ' en Coop,';
+								if($Solo!=0){
+									echo ' Solo,';
+								}
+								if($Multi!=0){
+									echo ' Multi,';
+								}
+							}
+							else if($Multi!=0){
+								echo ' en Multi,';
+								if($Solo!=0){
+									echo ' Solo,';
+								}
+								if($Coop!=0){
+									echo ' Coop,';
+								}
+							}
+						}
+						if(strlen($Nom)>0){
+
+							$Requete='select `Nom` from `VR_grp1_Jeux` where Nom=\''.$Nom.'\'';
+							$Reponse=mysql_query($Requete);
+							$Reponse=mysql_fetch_assoc($Reponse);
+			
+							if(strlen($Reponse) > 0){
+								echo $Nom." est present dans notre base de donnee. ";
+							}
+							else{
+								echo "Nous ne possedons pas cet article.";
+							}
+						}
+						if($Age!=0){
+							echo ' A partir de '.$Age;
+						}
+						
+						echo '<br />';
 						echo "</p>";
+						
+						
 						
 						
 						$Reponse=mysql_query($req2) or die(mysql_error());
@@ -157,10 +242,21 @@
 						echo '<p> Il y a '.$Data['nombre_jeux'].' jeux de ce type : </p>';
 		
 						$Reponse=mysql_query($req) or die(mysql_error());
-						$Data=mysql_fetch_assoc($Reponse);
+						
 		
 						while($Data=mysql_fetch_assoc($Reponse)){
-							echo '<p class=\"Jeux\">'.$Data['Nom'].'</p>';
+							echo '<p class=\"Jeux\">'.$Data['Nom'].'<br />';
+							if($Age==0){
+								echo 'Â partir de : '.$Data['Age'].' ans <br />';
+							}
+							
+							if($Plateforme==''){
+								echo 'Sur : '.$Data['Plateforme'].'<br />';
+							}
+							if($Genre==''){
+								echo 'Genre : '.$Data['Genre'].'<br />';
+							}
+							echo '</p>';
 						}
 						
 						

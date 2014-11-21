@@ -24,6 +24,7 @@
 			
 				<label for="Plateforme">Sur quel plateforme souhaitez-vous jouer ?</label>
 				<select name="Plateforme" id="plateforme">
+					<option value=""></option>
 					<option value="PC">PC</option>
 					<option value="Xbox 360">Xbox 360</option>
 					<option value="Xbox One">Xbox One</option>
@@ -39,6 +40,7 @@
 				<br /><br />
 				<label for="Genre">Â quel genre de jeu souhaitez-vous jouer ?</label>
 				<select name="Genre" id="Genre">
+					<option value=""></option>
 					<option value="Autres">Autres</option>
 					<option value="Action">Action</option>
 					<option value="Aventure">Aventure</option>
@@ -59,11 +61,11 @@
 				<input type="checkbox" name="Coop" /><label for="nb1">Coop</label>
 				<input type="checkbox" name="Multi" /><label for="nb2">Multi</label>
 				<br /><br />
-				<input type="radio" name="age" /><label for="age">3 ans</label>
-				<input type="radio" name="age" /><label for="age">7 ans</label>
-				<input type="radio" name="age" /><label for="age">12 ans</label>
-				<input type="radio" name="age" /><label for="age">16 ans</label>
-				<input type="radio" name="age" /><label for="age">18 ans</label>
+				<input type="radio" name="age" value="3" /><label for="age">3 ans</label>
+				<input type="radio" name="age" value="7"/><label for="age">7 ans</label>
+				<input type="radio" name="age" value="12"/><label for="age">12 ans</label>
+				<input type="radio" name="age" value="16"/><label for="age">16 ans</label>
+				<input type="radio" name="age" value="18"/><label for="age">18 ans</label>
 				<br /><br />
 				
 				<input type="submit" value="Confirmer" name="Confirmer" />
