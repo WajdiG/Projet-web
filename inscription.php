@@ -17,16 +17,16 @@
 				include("menu.php");
 			?>
 		</div>
-		<div id="corps"></div>		
+		<div id="corps">	
 		
 		
-		<p><form method="post" traitement="surprise.php">
+		<p><form method="post" action="traitement.php">
 			
 			<fieldset><legend>Vos Coordonnées</legend>
 			
-				<input type="radio" name="genre" /><label for="M">M. </label>
-				<input type="radio" name="genre" /><label for="M">Mme. </label>
-				<input type="radio" name="genre" /><label for="M">Mlle. </label>
+				<input type="radio" name="genre" value="0" checked /><label for="M">M. </label>
+				<input type="radio" name="genre" value="1" /><label for="M">Mme. </label>
+				<input type="radio" name="genre" value="2" /><label for="M">Mlle. </label>
 				
 				<div id="titre">
 					<br />
@@ -62,7 +62,7 @@
 				<div id="formulaire">
 					<p id="tit"><input type="text" placeholder="16 caractèe maximum" name="pseudo" id="pseudo" maxlength="16" size="50" required /><br />
 								<input type="password" placeholder="entre 8 et 16 caractères" name="Password" id="Password" maxlength="16" size="50" required /><br />
-								<input type="password" placeholder="confirmer mot de passe" name="Password" id="confPass"  maxlength="16" size="50" required /><br />
+								<input type="password" placeholder="confirmer mot de passe" name="confirmation" id="confPass"  maxlength="16" size="50" required /><br />
 								<input type="email" name="mail" id="mail" placeholder="exemple : nouvel-espoir@starswars.IV" maxlength="46" size="50" required /><br />
 					</p>
 				</div>
@@ -70,12 +70,15 @@
 			</fieldset>
 			
 			<p id="tit2"><input type="checkbox" name="arnaque" id="arnaque" required /><label for="arnaque">J'accepte les <a href="condtionutilisation.html">Conditions d'utilisation </a></label></p>	
-			<p id="tit2"><input type="submit" value="Confirmer" /></p>
+			
+			<p id="tit2"><input type="submit" value="confirmer" name="valider" /></p>
 		
-		</form></p>
+		</form></p></div>
 	 
 		<div id="pied">
-			O
+			<?php
+				include("pied.php");
+			?>
 		</div>	
 	</body>
 </html>

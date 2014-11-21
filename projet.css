@@ -2,8 +2,17 @@
 	background-color : pink;
 	}
 	
+fieldset{
+	width : 70%;
+	background-color : darkred ;
+	color : black ;
+	font-weight : bold ;
+	}
+	
 #formulaire{
 	padding-left : 15%;
+	margin-right : 15%;
+	padding-top : 10px;
 	}
 	
 #titre{
@@ -20,8 +29,8 @@
 	margin-left : 3% ;
 	}
 div#entete{
-	color : darkblue;
-	background-color : lightgreen;
+	color : lightgrey;
+	background-color : black;
 	padding-top : 2%;
 	padding-bottom : 2%;
 	text-align : center;
@@ -33,12 +42,13 @@ div#menu{
 	margin-right : 5%;
 	border-right : 3%;
 	padding-right : 3%;
-	height : 500px;
+	height : 2000px;
+	background-color : black ;
 }
 
 div#pied{
 	color : darkblue;
-	background-color : pink;
+	background-color : black;
 	margin-top : 5%;
 	text-align : justify;
 	padding-top : 0.1%;
