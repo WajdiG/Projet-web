@@ -1,0 +1,40 @@
+﻿<?php
+	session_destroy();
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ludothèque : Deconnexion </title>
+		<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
+     	<link rel="stylesheet" type="text/css" href="projet.css" media="screen" />
+	</head>
+	<body>
+		
+		<div id="entete"> 
+			<h1>ludothèque du Mans</h1> 
+		</div>
+			
+		<div id="menu">
+			<?php
+				include("menu.php");
+			?>
+		</div>
+			
+		<div id="corps">
+			<fieldset><legend>Deconnexion</legend>
+				<p>Vous avez bien été deconnecter de notre site.<br />
+				Si vous souhaitez vous reconnecter, c'est <a href="connexion.php">ici</a> que ça se passe
+				</p>
+			</fieldset>
+		
+		</div>
+		
+		<div id="pied">
+			<?php
+				include("pied.php");
+			?>
+		</div>	
+			
+	</body>
+</html>
