@@ -26,7 +26,7 @@
 					<li>Participer à des évènements permettant aux joueurs de se rencontrer</li>
 				</ul>
 				<p> Pour bénéficier de nos services, vous devrez simplement vous inscrire sur notre site en cliquant<a href="inscription.php"> ici</a></p>
-				<p> Si vous êtes déjà inscrit, accèdez à votre <a href="panier.html">panier</a> ou recherchez un jeu <a href="jeux.php">ici</a></p>
+				<p> Si vous êtes déjà inscrit, accèdez à votre <a href="Panier.php">panier</a> ou recherchez un jeu <a href="jeux.php">ici</a></p>
 			</div>
 		</div>
 		<div id="pied">
