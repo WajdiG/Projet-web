@@ -6,4 +6,4 @@ Auteur : Guedouar Wajdi/Thieulart Godefroy
 liens vers le site : http://info.univ-lemans.fr/~spi2024/Projet-web/Projet.php
 liens vers le projet git : https://github.com/WajdiG/Projet-web/tree/master
 
-Nous avons pu réaliser un site fonctionnel contenant les différents élément demandés, mais nous n'avons, cependant, pas pu améliorer celui-ci, son aspect, optimisation des programmes etc... =
+Nous avons pu réaliser un site fonctionnel contenant les différents élément demandés, mais nous n'avons, cependant, pas pu améliorer celui-ci, son aspect, optimisation des programmes etc... 
