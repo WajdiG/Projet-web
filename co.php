@@ -1,6 +1,7 @@
 <?php
-		session_start();		
 
+		
+		
 		$server="info.univ-lemans.fr";
 		$bdd="info201a";
 		$table="VR_grp1_ID";
@@ -12,24 +13,27 @@
 		if(!$retour){
 			include("erreur.php");
 		}
-
-		$_SESSION['login']=$_POST["login"];
-		$_SESSION['password']=$_POST["Password"];
+	
+		if(isset($_SESSION["login"])){
+			$_SESSION["login"]=$_POST["login"];
+			$_SESSION["password"]=$_POST["password"];
+		}
 		
-		$confPass="SELECT password FROM `$table` WHERE `login`='$login';";
+		
+		$confPass="SELECT password FROM `$table` WHERE `login`='$_SESSION[\"login\"]';";
 		$req=mysql_query($confPass);
 		$Data=mysql_fetch_assoc($req);
 		
-		$genre=mysql_query("SELECT genre FROM `$table` WHERE `login`='$_SESSION['login']' AND `password`='$_SESSION['password']';");
+		$genre=mysql_query("SELECT genre FROM `$table` WHERE `login`='$_SESSION[\"login\"]' AND `password`='$_SESSION[\"password\"]';");
 		$Data3=mysql_fetch_assoc($genre);
 		
-		$prenom=mysql_query("SELECT prenom FROM `$table` WHERE `login`='$_SESSION['login']' AND `password`='$_SESSION['password']';");
+		$prenom=mysql_query("SELECT prenom FROM `$table` WHERE `login`='$_SESSION[\"login\"]' AND `password`='$_SESSION[\"password\"]';");
 		$Data1=mysql_fetch_assoc($prenom);
 		
-		$nom=mysql_query("SELECT nom FROM `$table` WHERE `login`='$_SESSION['login']' AND `password`='$_SESSION['password']';");
+		$nom=mysql_query("SELECT nom FROM `$table` WHERE `login`='$_SESSION[\"login\"]' AND `password`='$_SESSION[\"password\"]';");
 		$Data2=mysql_fetch_assoc($nom);
 		
-		if(strcmp($Data['password'],$_SESSION['password'])==0){
+		if(strcmp($Data["password"],$_SESSION["password"])==0){
 			
 				echo"<!DOCTYPE html>
 					<html>
@@ -76,6 +80,7 @@
 			
 		}
 		else{
+			
 			echo"<!DOCTYPE html>
 					<html>
 						<head>
@@ -110,3 +115,4 @@
 					</html>";
 		}
 ?>
+

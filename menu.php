@@ -3,7 +3,7 @@
 
 	echo "<ul>";
 	echo "<li class=\"menu\"><a href=\"Projet.php\">Acceuil</a></li>";
-	if(isset($_SESSION['login']) AND isset($_SESSION['password'])){
+	if ((isset($_SESSION['login'])) && (!empty($_SESSION['login']))){
 		echo "<li class=\"menu\"><a href=\"deconnexion.php\">Se Deconnecter</a></li>";
 	}
 	else{
