@@ -304,6 +304,9 @@
 							
 							echo 'Quantité en stock : '.$Data['NbJeuxStock'].'<br />';
 							echo '</p>';
+							echo'<form method="get" action="ajouter.php">
+									Ajouter <input type=\'submit\' name=\'add\' value=\''.$Data['Nom'].'\'/> au panier	
+								</form>'; 
 						}
 						
 						

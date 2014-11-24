@@ -9,10 +9,10 @@
 	$LienBase=mysql_connect($server,$user,$mdp);
 	$retour=mysql_select_db($bdd,$LienBase);
 	
-	$req='DELETE FROM VR_grp1_Paniers WHERE Client=\''.$_SESSION['login'].'\' AND Nom=\''.$_GET['sup'].'\'';
+	$req='INSERT INTO `info201a`.`VR_grp1_Paniers` (`Nom`,`Client`,`Creneau`) VALUES (\''.$_GET['add'].'\',\''.$_SESSION['login'].'\',\'\')';
 
 	if (isset($_SESSION['login']) AND !empty($_SESSION['login'])){
-		$sup=mysql_query($req);
+		$add=mysql_query($req);
 	}
-	header('Location: panier.php');
+	header('Location: recherchejeux.php');
 ?>

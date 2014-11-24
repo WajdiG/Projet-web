@@ -34,7 +34,7 @@
 				$retour=mysql_select_db($bdd,$LienBase);
 				
 				$Requete='SELECT * FROM `VR_grp1_Jeux` ORDER BY ANS,MOIS,JOUR desc LIMIT 7';
-				$Reponse=mysql_query($Requete);
+				$Reponse=mysql_query($Requete)
 				
 				while($Data=mysql_fetch_assoc($Reponse)){
 					echo '<p class=\"Jeux\">'.$Data['Nom'].'<br />';
