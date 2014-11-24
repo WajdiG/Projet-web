@@ -12,6 +12,7 @@
 		
 		<div>
 			<div id="menu">
+				<!-- inclue le fichier menu.php contenant le menu présent sur chaque page -->
 				<?php
 					include("menu.php");
 				?>
@@ -30,6 +31,7 @@
 			</div>
 		</div>
 		<div id="pied">
+			<!-- inclue le fichier pied.php contenant le pied de page present sur chacune des pages -->
 			<?php
 				include("pied.php");
 			?>

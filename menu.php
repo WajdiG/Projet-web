@@ -1,4 +1,5 @@
 ﻿<?php 
+	// Menu du site apparaissant sur chaques pages
 	session_start();
 
 	echo "<ul>";

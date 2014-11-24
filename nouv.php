@@ -11,6 +11,7 @@
 		</div>
 		
 		<div id="menu">
+				<!-- inclue le fichier menu.php contenant le menu présent sur chaque page -->
 				<?php
 					include("menu.php");
 				?>
@@ -21,6 +22,7 @@
 			
 			<p>Par soucis de clarté, nous n'afficherons à l'écran que les septs derniers ajouts au site : </p>
 			
+			<!-- code permettant d'afficher les 7 dernières entrées de la table VR_grp1_Jeux -->
 			<?php
 				$server="info.univ-lemans.fr";
 				$bdd="info201a";
@@ -55,6 +57,7 @@
 			?>
 		</div>
 		<div id="pied">
+			<!-- inclue le fichier pied.php contenant le pied de page present sur chacune des pages -->
 			<?php
 				include("pied.php");
 			?>

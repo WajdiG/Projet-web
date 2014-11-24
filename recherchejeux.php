@@ -5,6 +5,8 @@
 		$table="VR_grp1_Jeux";
 		$user="info201a_user";
 		$mdp="com72";
+		
+		//cc est un compteur utiliser pour la construction des resquetes sql
 		$cc=0;
 		
 		$Nom=$_POST["Nom"];
@@ -17,6 +19,7 @@
 		$LienBase=mysql_connect($server,$user,$mdp);
 		$retour=mysql_select_db($bdd,$LienBase);
 		
+		//convertit la valeur des variables en int pour le traitement dans la BDD
 		if($Solo=='on'){
 			$Solo=1;
 		}else{
@@ -37,6 +40,10 @@
 		
 		$req = 'SELECT * from `VR_grp1_Jeux`';
 		$req2 = 'select count(*) as nombre_jeux, Nom from `VR_grp1_Jeux`';
+		
+		/*construction de la requete SQL en fonction des demandes de l'utilisateur
+		 *$cc est ici utiliser pour la présence du and dans la requete sql, si cc=0, on ajoute la commande et cc devient > 0. Sinon, on ajoute la commande preceder du and.
+		 */
 		
 		if($Genre!=''||$Nom!=''||$Plateforme!=''||$Solo!=0||$Coop!=0||$Multi!=0||$Nom!=''||$Age!=0){
 			$req = $req.' WHERE';
@@ -154,6 +161,8 @@
 				$cc=1;	
 			}
 		}
+		
+		//affichage de la page html 
 		 
 		echo "<!DOCTYPE html>
 				<html>
@@ -175,6 +184,7 @@
 					</div>
 					<div id=\"corps\">";
 					
+					//affichage du resultat de la requete
 						echo "<h1>Résultat</h1>";
 						echo "<p>";
 						echo "Votre recherche : ";
@@ -186,30 +196,30 @@
 						}
 						if($Solo!=0||$Coop!=0||$Multi!=0){
 							if($Solo!=0){
-								echo ' en Solo,';
+								echo ' en Solo';
 								if($Coop!=0){
-									echo ' Coop,';
+									echo ', Coop';
 								}
 								if($Multi!=0){
-									echo ' Multi,';
+									echo ', Multi';
 								}
 							}
 							else if($Coop!=0){
-								echo ' en Coop,';
+								echo ' en Coop';
 								if($Solo!=0){
-									echo ' Solo,';
+									echo ', Solo';
 								}
 								if($Multi!=0){
-									echo ' Multi,';
+									echo ', Multi';
 								}
 							}
 							else if($Multi!=0){
-								echo ' en Multi,';
+								echo ' en Multi';
 								if($Solo!=0){
-									echo ' Solo,';
+									echo ', Solo';
 								}
 								if($Coop!=0){
-									echo ' Coop,';
+									echo ', Coop';
 								}
 							}
 						}
@@ -227,7 +237,7 @@
 							}
 						}
 						if($Age!=0){
-							echo ' A partir de '.$Age;
+							echo ' à partir de '.$Age.' ans'	;
 						}
 						
 						echo '<br />';
@@ -240,6 +250,10 @@
 						$Data=mysql_fetch_assoc($Reponse);
 		
 						echo '<p> Il y a '.$Data['nombre_jeux'].' jeux de ce type : </p>';
+						
+						if($Data['nombre_jeux']==0){
+							echo 'Aucun article correspondant';
+						}
 		
 						$Reponse=mysql_query($req) or die(mysql_error());
 						
@@ -256,6 +270,38 @@
 							if($Genre==''){
 								echo 'Genre : '.$Data['Genre'].'<br />';
 							}
+							if($Solo==0&&$Coop==0&&$Multi==0){
+								echo 'Joueur : ';
+								if($Data['Solo']==1){
+									echo ' en Solo';
+									if($Data['Coop']==1){
+										echo ', Coop';
+									}
+									if($Data['Multi']==1){
+										echo ', Multi';
+									}
+								}
+								else if($Data['Coop']==1){
+									echo ' en Coop';
+									if($Data['Solo']==1){
+										echo ', Solo';
+									}
+									if($Data['Multi']==1){
+										echo ', Multi';
+									}
+								}
+								else if($Data['Multi']==1){
+									echo ' en Multi';
+									if($Data['Solo']==1){
+										echo ', Solo';
+									}
+									if($Data['Coop']==1){
+										echo ', Coop';
+									}
+								}
+								echo '<br />';
+							}
+							
 							echo 'Quantité en stock : '.$Data['NbJeuxStock'].'<br />';
 							echo '</p>';
 						}

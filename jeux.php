@@ -11,6 +11,7 @@
 		</div>
 		
 		<div id="menu">
+				<!-- inclue le fichier menu.php contenant le menu présent sur chaque page -->
 				<?php
 					include("menu.php");
 				?>
@@ -18,10 +19,12 @@
 		<div id="corps">
 			<h1 class="titre">Nos Jeux</h1>
 			
+			<!-- section concernant le formulaire de recherche -->
 			<form method="post" action="recherchejeux.php">
 				
 				Nom : <input name="Nom" size="50px"/><br /><br />
 			
+				<!-- Volet déroulant contenant une selection de plateforme -->
 				<label for="Plateforme">Sur quel plateforme souhaitez-vous jouer ?</label>
 				<select name="Plateforme" id="plateforme">
 					<option value=""></option>
@@ -38,6 +41,7 @@
 					<option value="Nintendo 3DS">Nintendo 3DS</option>
 				</select>
 				<br /><br />
+				<!-- Volet déroulant contenant des genres de jeux -->
 				<label for="Genre">Â quel genre de jeu souhaitez-vous jouer ?</label>
 				<select name="Genre" id="Genre">
 					<option value=""></option>
@@ -57,10 +61,12 @@
 					<option value="Tir">Tir</option>
 				</select>
 				<br /><br />
+				<!-- bouton permettant de choisir le nombre de joueur -->
 				<input type="checkbox" name="Solo" /><label for="nb">Solo</label>
 				<input type="checkbox" name="Coop" /><label for="nb1">Coop</label>
 				<input type="checkbox" name="Multi" /><label for="nb2">Multi</label>
 				<br /><br />
+				<!-- bouton permettant de choisir l'age limite des jeux -->
 				<input type="radio" name="age" value="3" /><label for="age">3 ans</label>
 				<input type="radio" name="age" value="7"/><label for="age">7 ans</label>
 				<input type="radio" name="age" value="12"/><label for="age">12 ans</label>
@@ -68,6 +74,7 @@
 				<input type="radio" name="age" value="18"/><label for="age">18 ans</label>
 				<br /><br />
 				
+				<!-- bouton de cofirmation permettant de soumettre le formulaire au traitement -->
 				<input type="submit" value="Confirmer" name="Confirmer" />
 				
 			</form>
@@ -76,6 +83,7 @@
 			
 		</div>
 		<div id="pied">
+			<!-- inclue le fichier pied.php contenant le pied de page present sur chacune des pages -->
 			<?php
 				include("pied.php");
 			?>
