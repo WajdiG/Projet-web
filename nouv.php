@@ -11,19 +11,53 @@
 		</div>
 		
 		<div id="menu">
+				<!-- inclue le fichier menu.php contenant le menu présent sur chaque page -->
 				<?php
 					include("menu.php");
 				?>
 		</div>
 		<div id="corps">
+			
+			<h1>Nouveauté</h1>
+			
+			<p>Par soucis de clarté, nous n'afficherons à l'écran que les septs derniers ajouts au site : </p>
+			
+			<!-- code permettant d'afficher les 7 dernières entrées de la table VR_grp1_Jeux -->
 			<?php
-				$Requete='select `Ans`,`Mois`,`Jour` from `VR_grp1_Jeux`';
-				$Reponse=mysql_query($Requete);
-				$Data=mysql_fetch_assoc($Reponse);
+				$server="info.univ-lemans.fr";
+				$bdd="info201a";
+				$table="VR_grp1_Jeux";
+				$user="info201a_user";
+				$mdp="com72";
 				
+				$LienBase=mysql_connect($server,$user,$mdp);
+				$retour=mysql_select_db($bdd,$LienBase);
+				
+				$Requete='SELECT * FROM `VR_grp1_Jeux` ORDER BY ANS,MOIS,JOUR desc LIMIT 7';
+				$Reponse=mysql_query($Requete);
+				
+				while($Data=mysql_fetch_assoc($Reponse)){
+					echo '<p class=\"Jeux\">'.$Data['Nom'].'<br />';
+					echo 'Â partir de : '.$Data['Age'].' ans <br />';
+					echo 'Sur : '.$Data['Plateforme'].'<br />';
+					echo 'Genre : '.$Data['Genre'].'<br />';		
+					if($Data['Solo']==1){
+						echo 'Type : Solo';
+					}
+					if($Data['Coop']==1){
+						echo ', Coop';
+					}		
+					if($Data['Multi']==1){
+						echo ', Multi';
+					}	
+					echo '<br />';
+					echo 'Quantité en stock : '.$Data['NbJeuxStock'].'<br />';
+					echo '</p>';
+				}
 			?>
 		</div>
 		<div id="pied">
+			<!-- inclue le fichier pied.php contenant le pied de page present sur chacune des pages -->
 			<?php
 				include("pied.php");
 			?>

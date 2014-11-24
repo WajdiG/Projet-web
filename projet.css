@@ -1,33 +1,34 @@
 :required{
 	background-color : pink;
-	}
+}
 	
 fieldset{
 	width : 70%;
 	background-color : darkred ;
 	color : black ;
 	font-weight : bold ;
-	}
+}
 	
 #formulaire{
 	padding-left : 15%;
 	margin-right : 15%;
 	padding-top : 10px;
-	}
+}
 	
 #titre{
 	float : left;
-	height : 2000 px;
-	}
+	height : 1000%;
+}
 
 #tit{
-	padding : auto 5% auto 1% ;
-	}
+	padding-right : 5%;
+	padding-left : 1%;
+}
 	
 #tit2{
-
 	margin-left : 3% ;
-	}
+}
+
 div#entete{
 	color : lightgrey;
 	background-color : black;
@@ -40,14 +41,13 @@ div#menu{
 	float : left;
 	text-align : justify;
 	margin-right : 5%;
-	border-right : 3%;
 	padding-right : 3%;
 	height : 2000px;
 	background-color : black ;
 }
 
 div#pied{
-	color : green;
+	color : white;
 	background-color : black;
 	margin-top : 5%;
 	text-align : justify;
@@ -73,13 +73,12 @@ li.menu :link{
 li.menu :visited{
 	text-decoration : none;
 	color : orange;
+	font-style : bold;
 }
 
 li.menu :hover{
 	text-decoration : none;
 	color : red;
-	font-size : 120%;
-	font-weight : bold;
 }
 
 div#corps{
@@ -97,6 +96,7 @@ li.pied{
 	display : inline;
 	padding-right : 15px;
 	margin-left : 100px;
+	color : white;
 }
 
 li.pied :link{
