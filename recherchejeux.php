@@ -167,7 +167,7 @@
 		echo "<!DOCTYPE html>
 				<html>
 				<head>
-					<title> projet ludothèque Guedouar/Thieulart </title>
+					<title> Ludothèque : Jeux </title>
 					<meta http-equiv=\"Content-Type\" content=\"text/HTML; charset=utf-8\" />
 					<link rel=\"stylesheet\" type=\"text/css\" href=\"projet.css\" media=\"screen\" />
 				</head>

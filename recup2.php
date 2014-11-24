@@ -36,7 +36,7 @@
 							</div>
 		
 							<div id=\"menu\">";
-								
+									//inclue le fichier menu.php contenant le menu présent sur chaque page
 									include("menu.php");
 									
 			echo "			</div>
@@ -71,7 +71,7 @@
 							</div>
 		
 							<div id=\"menu\">";
-								
+									//inclue le fichier menu.php contenant le menu présent sur chaque page
 									include("menu.php");
 									
 			echo "			</div>

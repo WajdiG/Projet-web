@@ -1,4 +1,5 @@
 <?php
+	//Sous-programme responsable de la suppression d'un jeu depuis le panier d'un utilisateur
 	session_start();
 	
 	$server="info.univ-lemans.fr";

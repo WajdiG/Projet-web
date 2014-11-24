@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Nouveauté </title>
+		<title> Ludothèque : Nouveauté </title>
 		<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
      	<link rel="stylesheet" type="text/css" href="projet.css" media="screen" />
 	</head>

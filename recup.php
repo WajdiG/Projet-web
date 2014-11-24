@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ludothèque : recuperation </title>
+		<title>Ludothèque : recupération </title>
 		<meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
      	<link rel="stylesheet" type="text/css" href="projet.css" media="screen" />
 	</head>
@@ -13,6 +13,7 @@
 			
 		<div id="menu">
 			<?php
+				//inclue le fichier menu.php contenant le menu présent sur chaque page
 				include("menu.php");
 			?>
 		</div>

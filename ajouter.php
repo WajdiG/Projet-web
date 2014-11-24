@@ -1,4 +1,5 @@
 <?php
+	//Sous-programme responsable de l'ajout d'un jeu au panier de l'utilisateur
 	session_start();
 	
 	$server="info.univ-lemans.fr";
