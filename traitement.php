@@ -14,14 +14,14 @@
 		}
 		
 		$genre=$_POST["genre"];
-			$_SESSION["prenom"]=$prenom=$_POST["Prénom"];
-			$_SESSION["nom"]$nom=$_POST["Nom"];
+			$login=$prenom=$_POST["Prénom"];
+			$login=$_POST["Nom"];
 		$jourN=$_POST["jour"];
 		$moisN=$_POST["mois"];
 		$anneeN=$_POST["annee"];
 		$tel=$_POST["tel"];
-			$_SESSION["login"]$login=$_POST["pseudo"];
-			$_SESSION["password"]$password=$_POST["Password"];
+			$login=$_POST["pseudo"];
+			$password=$_POST["Password"];
 		$confirmation=$_POST["confirmation"];
 		$mail=$_POST["mail"];
 		$requete="INSERT INTO `$bdd`.`$table` 
